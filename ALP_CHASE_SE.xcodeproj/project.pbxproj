@@ -17,6 +17,8 @@
 		04F8A52E2A1EFAB400ED8E50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F8A52D2A1EFAB400ED8E50 /* Preview Assets.xcassets */; };
 		04F8A5302A1EFAB400ED8E50 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8A52F2A1EFAB400ED8E50 /* Persistence.swift */; };
 		04F8A5332A1EFAB400ED8E50 /* ALP_CHASE_SE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04F8A5312A1EFAB400ED8E50 /* ALP_CHASE_SE.xcdatamodeld */; };
+		04F8A5532A1FA06B00ED8E50 /* NewRunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8A5522A1FA06B00ED8E50 /* NewRunView.swift */; };
+		04F8A5552A1FA07600ED8E50 /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8A5542A1FA07600ED8E50 /* NewRunViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		04F8A52D2A1EFAB400ED8E50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04F8A52F2A1EFAB400ED8E50 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		04F8A5322A1EFAB400ED8E50 /* ALP_CHASE_SE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ALP_CHASE_SE.xcdatamodel; sourceTree = "<group>"; };
+		04F8A5522A1FA06B00ED8E50 /* NewRunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRunView.swift; sourceTree = "<group>"; };
+		04F8A5542A1FA07600ED8E50 /* NewRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 		04ED27EB2A1F5B2400D39030 /* NewRun */ = {
 			isa = PBXGroup;
 			children = (
+				04F8A5522A1FA06B00ED8E50 /* NewRunView.swift */,
+				04F8A5542A1FA07600ED8E50 /* NewRunViewController.swift */,
 			);
 			path = NewRun;
 			sourceTree = "<group>";
@@ -210,8 +216,10 @@
 				04ED27F22A1F5D3B00D39030 /* FormatDisplay.swift in Sources */,
 				04ED27F12A1F5D3B00D39030 /* UnitExtensions.swift in Sources */,
 				04F8A5302A1EFAB400ED8E50 /* Persistence.swift in Sources */,
+				04F8A5552A1FA07600ED8E50 /* NewRunViewController.swift in Sources */,
 				04ED27EE2A1F5D2000D39030 /* LocationManager.swift in Sources */,
 				04F8A5292A1EFAB100ED8E50 /* ContentView.swift in Sources */,
+				04F8A5532A1FA06B00ED8E50 /* NewRunView.swift in Sources */,
 				04F8A5272A1EFAB100ED8E50 /* ALP_CHASE_SEApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
