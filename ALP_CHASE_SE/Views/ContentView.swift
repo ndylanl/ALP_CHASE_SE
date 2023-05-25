@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  ALP_CHASE_SE
-//
-//  Created by MacBook Pro on 25/05/23.
-//
-
 import SwiftUI
 import CoreData
 

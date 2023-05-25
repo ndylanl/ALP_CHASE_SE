@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04ED27EE2A1F5D2000D39030 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED27ED2A1F5D2000D39030 /* LocationManager.swift */; };
+		04ED27F12A1F5D3B00D39030 /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED27EF2A1F5D3B00D39030 /* UnitExtensions.swift */; };
+		04ED27F22A1F5D3B00D39030 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED27F02A1F5D3B00D39030 /* FormatDisplay.swift */; };
+		04ED27F42A1F5D7100D39030 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED27F32A1F5D7100D39030 /* MapView.swift */; };
 		04F8A5272A1EFAB100ED8E50 /* ALP_CHASE_SEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8A5262A1EFAB100ED8E50 /* ALP_CHASE_SEApp.swift */; };
 		04F8A5292A1EFAB100ED8E50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8A5282A1EFAB100ED8E50 /* ContentView.swift */; };
 		04F8A52B2A1EFAB400ED8E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F8A52A2A1EFAB400ED8E50 /* Assets.xcassets */; };
@@ -16,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04ED27ED2A1F5D2000D39030 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		04ED27EF2A1F5D3B00D39030 /* UnitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
+		04ED27F02A1F5D3B00D39030 /* FormatDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
+		04ED27F32A1F5D7100D39030 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		04ED27F52A1F5FD400D39030 /* ALP-CHASE-SE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ALP-CHASE-SE-Info.plist"; sourceTree = SOURCE_ROOT; };
 		04F8A5232A1EFAB100ED8E50 /* ALP_CHASE_SE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALP_CHASE_SE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F8A5262A1EFAB100ED8E50 /* ALP_CHASE_SEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALP_CHASE_SEApp.swift; sourceTree = "<group>"; };
 		04F8A5282A1EFAB100ED8E50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +45,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04ED27E72A1F5AF400D39030 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				04F8A52F2A1EFAB400ED8E50 /* Persistence.swift */,
+				04F8A5312A1EFAB400ED8E50 /* ALP_CHASE_SE.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		04ED27E82A1F5AFE00D39030 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				04ED27ED2A1F5D2000D39030 /* LocationManager.swift */,
+				04ED27F02A1F5D3B00D39030 /* FormatDisplay.swift */,
+				04ED27EF2A1F5D3B00D39030 /* UnitExtensions.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		04ED27E92A1F5B0900D39030 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04F8A5282A1EFAB100ED8E50 /* ContentView.swift */,
+				04ED27F32A1F5D7100D39030 /* MapView.swift */,
+				04ED27EC2A1F5B2C00D39030 /* RunDetail */,
+				04ED27EB2A1F5B2400D39030 /* NewRun */,
+				04ED27EA2A1F5B1800D39030 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04ED27EA2A1F5B1800D39030 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		04ED27EB2A1F5B2400D39030 /* NewRun */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewRun;
+			sourceTree = "<group>";
+		};
+		04ED27EC2A1F5B2C00D39030 /* RunDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RunDetail;
+			sourceTree = "<group>";
+		};
 		04F8A51A2A1EFAB100ED8E50 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +116,12 @@
 		04F8A5252A1EFAB100ED8E50 /* ALP_CHASE_SE */ = {
 			isa = PBXGroup;
 			children = (
+				04ED27F52A1F5FD400D39030 /* ALP-CHASE-SE-Info.plist */,
+				04ED27E92A1F5B0900D39030 /* Views */,
+				04ED27E82A1F5AFE00D39030 /* Util */,
+				04ED27E72A1F5AF400D39030 /* CoreData */,
 				04F8A5262A1EFAB100ED8E50 /* ALP_CHASE_SEApp.swift */,
-				04F8A5282A1EFAB100ED8E50 /* ContentView.swift */,
 				04F8A52A2A1EFAB400ED8E50 /* Assets.xcassets */,
-				04F8A52F2A1EFAB400ED8E50 /* Persistence.swift */,
-				04F8A5312A1EFAB400ED8E50 /* ALP_CHASE_SE.xcdatamodeld */,
 				04F8A52C2A1EFAB400ED8E50 /* Preview Content */,
 			);
 			path = ALP_CHASE_SE;
@@ -144,7 +206,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F8A5332A1EFAB400ED8E50 /* ALP_CHASE_SE.xcdatamodeld in Sources */,
+				04ED27F42A1F5D7100D39030 /* MapView.swift in Sources */,
+				04ED27F22A1F5D3B00D39030 /* FormatDisplay.swift in Sources */,
+				04ED27F12A1F5D3B00D39030 /* UnitExtensions.swift in Sources */,
 				04F8A5302A1EFAB400ED8E50 /* Persistence.swift in Sources */,
+				04ED27EE2A1F5D2000D39030 /* LocationManager.swift in Sources */,
 				04F8A5292A1EFAB100ED8E50 /* ContentView.swift in Sources */,
 				04F8A5272A1EFAB100ED8E50 /* ALP_CHASE_SEApp.swift in Sources */,
 			);
@@ -278,6 +344,8 @@
 				DEVELOPMENT_TEAM = RSBCF2NM6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ALP-CHASE-SE-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Chase needs access to your location in order to record and track your run!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -307,6 +375,8 @@
 				DEVELOPMENT_TEAM = RSBCF2NM6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ALP-CHASE-SE-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Chase needs access to your location in order to record and track your run!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

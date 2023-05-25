@@ -1,10 +1,3 @@
-//
-//  Persistence.swift
-//  ALP_CHASE_SE
-//
-//  Created by MacBook Pro on 25/05/23.
-//
-
 import CoreData
 
 struct PersistenceController {
@@ -31,7 +24,7 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "ALP_CHASE_SE")
+        container = NSPersistentContainer(name: "Chase")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
@@ -52,5 +45,17 @@ struct PersistenceController {
             }
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
+    }
+    
+    func save() {
+        let context = container.viewContext
+
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                // Show some error here
+            }
+        }
     }
 }
