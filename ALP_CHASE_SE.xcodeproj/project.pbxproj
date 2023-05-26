@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0400A31D2A1F93C2000A6645 /* RunDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400A31C2A1F93C2000A6645 /* RunDetailView.swift */; };
+		0400A31F2A1F9405000A6645 /* RunDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400A31E2A1F9405000A6645 /* RunDetailViewController.swift */; };
 		04ED27EE2A1F5D2000D39030 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED27ED2A1F5D2000D39030 /* LocationManager.swift */; };
 		04ED27F12A1F5D3B00D39030 /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED27EF2A1F5D3B00D39030 /* UnitExtensions.swift */; };
 		04ED27F22A1F5D3B00D39030 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED27F02A1F5D3B00D39030 /* FormatDisplay.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0400A31C2A1F93C2000A6645 /* RunDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailView.swift; sourceTree = "<group>"; };
+		0400A31E2A1F9405000A6645 /* RunDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailViewController.swift; sourceTree = "<group>"; };
 		04ED27ED2A1F5D2000D39030 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		04ED27EF2A1F5D3B00D39030 /* UnitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
 		04ED27F02A1F5D3B00D39030 /* FormatDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		04ED27EC2A1F5B2C00D39030 /* RunDetail */ = {
 			isa = PBXGroup;
 			children = (
+				0400A31C2A1F93C2000A6645 /* RunDetailView.swift */,
+				0400A31E2A1F9405000A6645 /* RunDetailViewController.swift */,
 			);
 			path = RunDetail;
 			sourceTree = "<group>";
@@ -211,8 +217,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0400A31D2A1F93C2000A6645 /* RunDetailView.swift in Sources */,
 				04F8A5332A1EFAB400ED8E50 /* ALP_CHASE_SE.xcdatamodeld in Sources */,
 				04ED27F42A1F5D7100D39030 /* MapView.swift in Sources */,
+				0400A31F2A1F9405000A6645 /* RunDetailViewController.swift in Sources */,
 				04ED27F22A1F5D3B00D39030 /* FormatDisplay.swift in Sources */,
 				04ED27F12A1F5D3B00D39030 /* UnitExtensions.swift in Sources */,
 				04F8A5302A1EFAB400ED8E50 /* Persistence.swift in Sources */,
