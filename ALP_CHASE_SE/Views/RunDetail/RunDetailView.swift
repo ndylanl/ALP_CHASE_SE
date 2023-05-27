@@ -17,14 +17,46 @@ struct RunDetailView: View {
         self._controller = StateObject(wrappedValue: RunDetailViewController(run: run))
     }
     
+    let maxHeight = UIScreen.main.bounds.size.height
+    let maxWidth = UIScreen.main.bounds.size.width
+    
     var body: some View {
         VStack {
-            MapView(controller: controller).frame(height:300)
-            Text(controller.distanceLabel)
-            Text(controller.dateLabel)
-            Text(controller.timeLabel)
-            Text(controller.paceLabel)
-        }
+            MapView(controller: controller).frame(width: maxWidth, height: ((maxHeight * 3) / 4))
+            
+            VStack{
+                HStack{
+                    Text("Distance").fontWeight(.bold)
+                    Spacer()
+                    Text(controller.distanceLabel)
+                }
+                
+                HStack{
+                    Text("Date").fontWeight(.bold)
+                    Spacer()
+                    Text(controller.dateLabel)
+                }
+                
+                HStack{
+                    Text("Pace").fontWeight(.bold)
+                    Spacer()
+                    Text(controller.paceLabel)
+                }
+                
+                HStack{
+                    Text("Time").fontWeight(.bold)
+                    Spacer()
+                    Text(controller.timeLabel)
+                }
+            }.padding(20).onAppear{
+                UINavigationBar.appearance().barTintColor = UIColor.white //changes the Bar Tint Color
+
+            }
+            
+           
+            
+            
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 

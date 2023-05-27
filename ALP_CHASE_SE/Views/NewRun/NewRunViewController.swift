@@ -18,9 +18,9 @@ class NewRunViewController: NSObject, ObservableObject {
     @Published var timer: Timer?
     @Published var distance = Measurement(value: 0, unit: UnitLength.meters)
     @Published var locationList: [CLLocation] = []
-    @Published var distanceLabel = "Distance:"
-    @Published var timeLabel = "Time:"
-    @Published var paceLabel = "Pace:"
+    @Published var distanceLabel = ""
+    @Published var timeLabel = ""
+    @Published var paceLabel = ""
     @Published var isRunning = false
     @Published var showAlert =  false
     @Published var map: MKMapView = MKMapView()
@@ -72,9 +72,9 @@ class NewRunViewController: NSObject, ObservableObject {
                                                seconds: seconds,
                                                outputUnit: UnitSpeed.minutesPerKilometer)
         
-        distanceLabel = "Distance:  \(formattedDistance)"
-        timeLabel = "Time:  \(formattedTime)"
-        paceLabel = "Pace:  \(formattedPace)"
+        distanceLabel = formattedDistance
+        timeLabel = formattedTime
+        paceLabel = formattedPace
     }
     
     private func startLocationUpdates() {

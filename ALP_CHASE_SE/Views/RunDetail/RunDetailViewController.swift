@@ -11,7 +11,7 @@ import MapKit
 
 class RunDetailViewController: NewRunViewController {
     
-    @Published var dateLabel = "Date:"
+    @Published var dateLabel = ""
     
     init(run: Run) {
         super.init()
@@ -29,10 +29,10 @@ class RunDetailViewController: NewRunViewController {
                                              seconds: seconds,
                                              outputUnit: UnitSpeed.minutesPerMile)
       
-        distanceLabel = "Distance:  \(formattedDistance)"
+        distanceLabel = formattedDistance
         dateLabel = formattedDate
-        timeLabel = "Time:  \(formattedTime)"
-        paceLabel = "Pace:  \(formattedPace)"
+        timeLabel = formattedTime
+        paceLabel = formattedPace
         loadMap()
     }
     

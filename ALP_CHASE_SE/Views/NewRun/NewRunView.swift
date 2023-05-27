@@ -13,22 +13,54 @@ struct NewRunView: View {
     
     @Environment(\.dismiss) private var dismiss
     @StateObject private var controller = NewRunViewController()
-        
+    let maxHeight = UIScreen.main.bounds.size.height
+    let maxWidth = UIScreen.main.bounds.size.width
+    
     var body: some View {
         NavigationStack {
             VStack {
-                MapView(controller: controller).frame(height:300)
-                Text(controller.distanceLabel)
-                Text(controller.timeLabel)
-                Text(controller.paceLabel)
+                MapView(controller: controller).frame( width: maxWidth,height: controller.isRunning ? maxHeight / 2 : ((maxHeight * 7)/8)).padding(0)
+                if controller.distanceLabel != "" {
+                    VStack{
+                        HStack{
+                            Text("Distance").fontWeight(.bold)
+                            Spacer()
+                            Text(controller.distanceLabel)
+                        }
+                        
+                        HStack{
+                            Text("Time").fontWeight(.bold)
+                            Spacer()
+                            Text(controller.timeLabel)
+                        }
+                        
+                        HStack{
+                            Text("Pace").fontWeight(.bold)
+                            Spacer()
+                            Text(controller.paceLabel)
+                        }
+                    }.padding(20)
+                    Spacer()
+                }
+                
+                
 //                Map(coordinateRegion: $controller.region
 //                    ,showsUserLocation: true)
 //                .frame(height: 300)
-                Spacer()
+                
                 if controller.isRunning {
-                    Button("Stop") {
+                    Button(action: {
                         controller.showAlert = true
-                    }
+                    }) {
+                        VStack{
+                            HStack{
+                                Spacer()
+                                Text("Stop").font(.system(size:25))
+                                Spacer()
+                            }
+                            Spacer()
+                        }.padding([.top], 20)
+                    }.background(.blue).foregroundColor(.white).frame(height: maxHeight/8)
                     .alert("Do You Want to Save the Run?", isPresented: $controller.showAlert) {
                         Button("Save") {
                             controller.stopTapped(isSave: true)
@@ -39,12 +71,22 @@ struct NewRunView: View {
                         }
                     }
                 } else {
-                    Button("Start") {
+                    Button(action: {
                         controller.startTapped()
-                    }
+                    }) {
+                        VStack{
+                            
+                            HStack{
+                                Spacer()
+                                Text("Start").font(.system(size:25))
+                                Spacer()
+                            }
+                            Spacer()
+                        }.padding([.top], 20)
+                    }.background(.blue).foregroundColor(.white).frame(height: maxHeight/8).padding(0)
                 }
-            }.padding(20)
-        }
+            }
+        }.ignoresSafeArea(.all).background(controller.isRunning ? .white : .blue)
     }
 }
 
