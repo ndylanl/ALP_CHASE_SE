@@ -36,7 +36,6 @@ class NewRunViewController: NSObject, ObservableObject {
     }
     
     func stopTapped(isSave: Bool) {
-        isRunning = false
         stopRun()
         if isSave {
             saveRun()

@@ -65,9 +65,12 @@ struct NewRunView: View {
                         Button("Save") {
                             controller.stopTapped(isSave: true)
                         }
-                        Button("Discard") {
+                        Button("Discard")  {
                             controller.stopTapped(isSave: false)
-                            dismiss()
+                           
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                dismiss()
+                            }
                         }
                     }
                 } else {
