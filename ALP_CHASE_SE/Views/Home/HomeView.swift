@@ -29,7 +29,7 @@ struct HomeView: View {
                     NavigationLink {
                         RunDetailView(run: item)
                     } label: {
-                        Text("Run at \(item.timestamp!, formatter: controller.dateFormatterGet) For \(item.duration) seconds and \(item.distance) meter")
+                        RunCardComponent(date:item.timestamp!, destination: String(item.distance))
                     }
                 }
             }
