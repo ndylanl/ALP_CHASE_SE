@@ -64,6 +64,9 @@ struct NewRunView: View {
                     .alert("Do You Want to Save the Run?", isPresented: $controller.showAlert) {
                         Button("Save") {
                             controller.stopTapped(isSave: true)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                dismiss()
+                            }
                         }
                         Button("Discard")  {
                             controller.stopTapped(isSave: false)

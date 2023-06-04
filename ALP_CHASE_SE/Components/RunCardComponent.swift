@@ -6,10 +6,20 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct RunCardComponent: View {
     var date : Date
-    var destination : String
+    var distance : NSNumber
+    var formattedDistance : String{
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.roundingMode = .up
+
+        let str = String(describing: formatter.string(from: distance)!)
+        return str
+    }
     var formattedDate : String{
         // Create Date Formatter
         let dateFormatter = DateFormatter()
@@ -30,7 +40,8 @@ struct RunCardComponent: View {
             }
             HStack{
                 Text("Distance : ").fontWeight(.bold)
-                Text(destination)
+                Text(String(formattedDistance))
+                Text(" Meter")
                 Spacer()
             }
         }
@@ -39,6 +50,6 @@ struct RunCardComponent: View {
 
 struct RunCardComponent_Previews: PreviewProvider {
     static var previews: some View {
-        RunCardComponent(date:Date(), destination: "")
+        RunCardComponent(date:Date(), distance: 23.5 as NSNumber)
     }
 }

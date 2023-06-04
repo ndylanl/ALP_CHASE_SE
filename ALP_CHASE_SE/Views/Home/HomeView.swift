@@ -29,7 +29,7 @@ struct HomeView: View {
                     NavigationLink {
                         RunDetailView(run: item)
                     } label: {
-                        RunCardComponent(date:item.timestamp!, destination: String(item.distance))
+                        RunCardComponent(date:item.timestamp!, distance: item.distance as NSNumber)
                     }
                 }
             }
