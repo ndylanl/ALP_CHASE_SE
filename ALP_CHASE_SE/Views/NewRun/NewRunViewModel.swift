@@ -1,17 +1,15 @@
 //
-//  NewRunViewController.swift
+//  NewRunViewModel.swift
 //  ALP_CHASE_SE
 //
-//  Created by MacBook Pro on 25/05/23.
+//  Created by MacBook Pro on 05/06/23.
 //
-
 
 import Foundation
 import CoreLocation
 import MapKit
 
-class NewRunViewController: NSObject, ObservableObject {
-    
+class NewRunViewModel : NSObject, ObservableObject{
     @Published var run: Run?
     @Published var locationManager = LocationManager.shared
     @Published var seconds = 0
@@ -118,10 +116,9 @@ class NewRunViewController: NSObject, ObservableObject {
             break
         }
     }
-    
 }
 
-extension NewRunViewController: CLLocationManagerDelegate {
+extension NewRunViewModel: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         for newLocation in locations {
             let howRecent = newLocation.timestamp.timeIntervalSinceNow
@@ -146,7 +143,7 @@ extension NewRunViewController: CLLocationManagerDelegate {
     
 }
 
-extension NewRunViewController: MKMapViewDelegate {
+extension NewRunViewModel: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         guard let polyline = overlay as? MKPolyline else {
             return MKOverlayRenderer(overlay: overlay)
@@ -157,3 +154,4 @@ extension NewRunViewController: MKMapViewDelegate {
         return renderer
     }
 }
+

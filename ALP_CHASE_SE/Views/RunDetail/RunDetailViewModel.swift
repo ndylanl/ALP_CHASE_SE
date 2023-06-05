@@ -1,16 +1,15 @@
 //
-//  RunDetailViewController.swift
+//  RunDetailViewModel.swift
 //  ALP_CHASE_SE
 //
-//  Created by MacBook Pro on 25/05/23.
+//  Created by MacBook Pro on 05/06/23.
 //
 
 import Foundation
 import CoreLocation
 import MapKit
 
-class RunDetailViewController: NewRunViewController {
-    
+class RunDetailViewModel : NewRunViewModel{
     @Published var dateLabel = ""
     
     init(run: Run) {
@@ -90,6 +89,5 @@ class RunDetailViewController: NewRunViewController {
       map.setRegion(region, animated: true)
         map.addOverlay(polyLine())
     }
-    
 }
 

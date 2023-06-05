@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0400A31D2A1F93C2000A6645 /* RunDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400A31C2A1F93C2000A6645 /* RunDetailView.swift */; };
-		0400A31F2A1F9405000A6645 /* RunDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400A31E2A1F9405000A6645 /* RunDetailViewController.swift */; };
 		040E67D12A222CBC00BB247A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E67D02A222CBC00BB247A /* HomeView.swift */; };
 		04E4284F2A2CAC5E00C35EA5 /* RunCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4284E2A2CAC5E00C35EA5 /* RunCardComponent.swift */; };
 		04E428532A2D683500C35EA5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E428522A2D683500C35EA5 /* HomeViewModel.swift */; };
@@ -25,12 +24,10 @@
 		04F8A5302A1EFAB400ED8E50 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8A52F2A1EFAB400ED8E50 /* Persistence.swift */; };
 		04F8A5332A1EFAB400ED8E50 /* ALP_CHASE_SE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04F8A5312A1EFAB400ED8E50 /* ALP_CHASE_SE.xcdatamodeld */; };
 		04F8A5532A1FA06B00ED8E50 /* NewRunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8A5522A1FA06B00ED8E50 /* NewRunView.swift */; };
-		04F8A5552A1FA07600ED8E50 /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F8A5542A1FA07600ED8E50 /* NewRunViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0400A31C2A1F93C2000A6645 /* RunDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailView.swift; sourceTree = "<group>"; };
-		0400A31E2A1F9405000A6645 /* RunDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailViewController.swift; sourceTree = "<group>"; };
 		040E67D02A222CBC00BB247A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		04E4284E2A2CAC5E00C35EA5 /* RunCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCardComponent.swift; sourceTree = "<group>"; };
 		04E428522A2D683500C35EA5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -49,7 +46,6 @@
 		04F8A52F2A1EFAB400ED8E50 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		04F8A5322A1EFAB400ED8E50 /* ALP_CHASE_SE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ALP_CHASE_SE.xcdatamodel; sourceTree = "<group>"; };
 		04F8A5522A1FA06B00ED8E50 /* NewRunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRunView.swift; sourceTree = "<group>"; };
-		04F8A5542A1FA07600ED8E50 /* NewRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				04F8A5522A1FA06B00ED8E50 /* NewRunView.swift */,
-				04F8A5542A1FA07600ED8E50 /* NewRunViewController.swift */,
 				04E428562A2D68C600C35EA5 /* NewRunViewModel.swift */,
 			);
 			path = NewRun;
@@ -125,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				0400A31C2A1F93C2000A6645 /* RunDetailView.swift */,
-				0400A31E2A1F9405000A6645 /* RunDetailViewController.swift */,
 				04E428542A2D687E00C35EA5 /* RunDetailViewModel.swift */,
 			);
 			path = RunDetail;
@@ -247,12 +241,10 @@
 				04E428532A2D683500C35EA5 /* HomeViewModel.swift in Sources */,
 				040E67D12A222CBC00BB247A /* HomeView.swift in Sources */,
 				04ED27F42A1F5D7100D39030 /* MapView.swift in Sources */,
-				0400A31F2A1F9405000A6645 /* RunDetailViewController.swift in Sources */,
 				04E428552A2D687E00C35EA5 /* RunDetailViewModel.swift in Sources */,
 				04ED27F22A1F5D3B00D39030 /* FormatDisplay.swift in Sources */,
 				04ED27F12A1F5D3B00D39030 /* UnitExtensions.swift in Sources */,
 				04F8A5302A1EFAB400ED8E50 /* Persistence.swift in Sources */,
-				04F8A5552A1FA07600ED8E50 /* NewRunViewController.swift in Sources */,
 				04ED27EE2A1F5D2000D39030 /* LocationManager.swift in Sources */,
 				04F8A5292A1EFAB100ED8E50 /* ContentView.swift in Sources */,
 				04F8A5532A1FA06B00ED8E50 /* NewRunView.swift in Sources */,
