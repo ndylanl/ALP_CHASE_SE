@@ -4,7 +4,7 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     
-    @ObservedObject var controller: NewRunViewController
+    @ObservedObject var controller: NewRunViewModel
     
     func makeUIView(context: Context) -> MKMapView {
         controller.map.delegate = controller

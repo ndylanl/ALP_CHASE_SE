@@ -10,11 +10,11 @@ import SwiftUI
 struct RunDetailView: View {
     
     var run: Run
-    @StateObject private var controller : RunDetailViewController
+    @StateObject private var controller : RunDetailViewModel
     
     init(run: Run) {
         self.run = run
-        self._controller = StateObject(wrappedValue: RunDetailViewController(run: run))
+        self._controller = StateObject(wrappedValue: RunDetailViewModel(run: run))
     }
     
     let maxHeight = UIScreen.main.bounds.size.height

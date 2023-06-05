@@ -11,7 +11,7 @@ import SwiftUI
 struct HomeView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
-    @StateObject private var controller = HomeViewController()
+    @StateObject private var controller = HomeViewModel()
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Run.distance, ascending: true)],
         animation: .default)

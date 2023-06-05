@@ -12,7 +12,7 @@ import MapKit
 struct NewRunView: View {
     
     @Environment(\.dismiss) private var dismiss
-    @StateObject private var controller = NewRunViewController()
+    @StateObject private var controller = NewRunViewModel()
     let maxHeight = UIScreen.main.bounds.size.height
     let maxWidth = UIScreen.main.bounds.size.width
     
