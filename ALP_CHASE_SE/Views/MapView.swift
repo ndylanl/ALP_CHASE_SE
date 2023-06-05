@@ -4,11 +4,11 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     
-    @ObservedObject var controller: NewRunViewModel
+    @ObservedObject var viewModel: NewRunViewModel
     
     func makeUIView(context: Context) -> MKMapView {
-        controller.map.delegate = controller
-        return controller.map
+        viewModel.map.delegate = viewModel
+        return viewModel.map
     }
         
     func updateUIView(_ uiView: MKMapView, context: Context) {

@@ -12,45 +12,45 @@ import MapKit
 struct NewRunView: View {
     
     @Environment(\.dismiss) private var dismiss
-    @StateObject private var controller = NewRunViewModel()
+    @StateObject private var viewModel = NewRunViewModel()
     let maxHeight = UIScreen.main.bounds.size.height
     let maxWidth = UIScreen.main.bounds.size.width
     
     var body: some View {
         NavigationStack {
             VStack {
-                MapView(controller: controller).frame( width: maxWidth,height: controller.isRunning ? maxHeight / 2 : ((maxHeight * 7)/8)).padding(0)
-                if controller.distanceLabel != "" {
+                MapView(viewModel: viewModel).frame( width: maxWidth,height: viewModel.isRunning ? maxHeight / 2 : ((maxHeight * 7)/8)).padding(0)
+                if viewModel.distanceLabel != "" {
                     VStack{
                         HStack{
                             Text("Distance").fontWeight(.bold)
                             Spacer()
-                            Text(controller.distanceLabel)
+                            Text(viewModel.distanceLabel)
                         }
                         
                         HStack{
                             Text("Time").fontWeight(.bold)
                             Spacer()
-                            Text(controller.timeLabel)
+                            Text(viewModel.timeLabel)
                         }
                         
                         HStack{
                             Text("Pace").fontWeight(.bold)
                             Spacer()
-                            Text(controller.paceLabel)
+                            Text(viewModel.paceLabel)
                         }
                     }.padding(20)
                     Spacer()
                 }
                 
                 
-//                Map(coordinateRegion: $controller.region
+//                Map(coordinateRegion: $viewModel.region
 //                    ,showsUserLocation: true)
 //                .frame(height: 300)
                 
-                if controller.isRunning {
+                if viewModel.isRunning {
                     Button(action: {
-                        controller.showAlert = true
+                        viewModel.showAlert = true
                     }) {
                         VStack{
                             HStack{
@@ -61,15 +61,15 @@ struct NewRunView: View {
                             Spacer()
                         }.padding([.top], 20)
                     }.background(.blue).foregroundColor(.white).frame(height: maxHeight/8)
-                    .alert("Do You Want to Save the Run?", isPresented: $controller.showAlert) {
+                    .alert("Do You Want to Save the Run?", isPresented: $viewModel.showAlert) {
                         Button("Save") {
-                            controller.stopTapped(isSave: true)
+                            viewModel.stopTapped(isSave: true)
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 dismiss()
                             }
                         }
                         Button("Discard")  {
-                            controller.stopTapped(isSave: false)
+                            viewModel.stopTapped(isSave: false)
                            
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 dismiss()
@@ -78,7 +78,7 @@ struct NewRunView: View {
                     }
                 } else {
                     Button(action: {
-                        controller.startTapped()
+                        viewModel.startTapped()
                     }) {
                         VStack{
                             
@@ -92,7 +92,7 @@ struct NewRunView: View {
                     }.background(.blue).foregroundColor(.white).frame(height: maxHeight/8).padding(0)
                 }
             }
-        }.ignoresSafeArea(.all).background(controller.isRunning ? .white : .blue)
+        }.ignoresSafeArea(.all).background(viewModel.isRunning ? .white : .blue)
     }
 }
 

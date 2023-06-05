@@ -10,11 +10,11 @@ import SwiftUI
 struct RunDetailView: View {
     
     var run: Run
-    @StateObject private var controller : RunDetailViewModel
+    @StateObject private var viewModel : RunDetailViewModel
     
     init(run: Run) {
         self.run = run
-        self._controller = StateObject(wrappedValue: RunDetailViewModel(run: run))
+        self._viewModel = StateObject(wrappedValue: RunDetailViewModel(run: run))
     }
     
     let maxHeight = UIScreen.main.bounds.size.height
@@ -22,31 +22,31 @@ struct RunDetailView: View {
     
     var body: some View {
         VStack {
-            MapView(controller: controller).frame(width: maxWidth, height: ((maxHeight * 3) / 4))
+            MapView(viewModel: viewModel).frame(width: maxWidth, height: ((maxHeight * 3) / 4))
             
             VStack{
                 HStack{
                     Text("Distance").fontWeight(.bold)
                     Spacer()
-                    Text(controller.distanceLabel)
+                    Text(viewModel.distanceLabel)
                 }
                 
                 HStack{
                     Text("Date").fontWeight(.bold)
                     Spacer()
-                    Text(controller.dateLabel)
+                    Text(viewModel.dateLabel)
                 }
                 
                 HStack{
                     Text("Pace").fontWeight(.bold)
                     Spacer()
-                    Text(controller.paceLabel)
+                    Text(viewModel.paceLabel)
                 }
                 
                 HStack{
                     Text("Time").fontWeight(.bold)
                     Spacer()
-                    Text(controller.timeLabel)
+                    Text(viewModel.timeLabel)
                 }
             }.padding(20).onAppear{
                 UINavigationBar.appearance().barTintColor = UIColor.white //changes the Bar Tint Color
